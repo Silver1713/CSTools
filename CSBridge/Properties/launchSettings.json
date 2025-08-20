@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CSBridge": {
+      "commandName": "Project",
+      "commandLineArgs": "CSBridge -h"
+    }
+  }
+}
