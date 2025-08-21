@@ -2,7 +2,7 @@
   "profiles": {
     "CSBridge": {
       "commandName": "Project",
-      "commandLineArgs": "CSBridge -h"
+      "commandLineArgs": "CSBridge ExampleScripts.dll -v -o Output"
     }
   }
 }

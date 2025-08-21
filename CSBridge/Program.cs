@@ -12,7 +12,7 @@ class Program
 
 
         // This is a simple C# program that prints "Hello, World!" to the console.
-        for (int i = 0; i < args.Length; ++i)
+        for (int i = 1; i < args.Length; ++i)
         {
             string arg = args[i];
 
@@ -105,6 +105,7 @@ class Program
     static void Main(string[] args)
     {
         GeneratorPreference settings = GetSettings(args);
+        CodeGen.Initialize(settings);
 
         if (Program.exitRequested)
         {
@@ -120,12 +121,19 @@ class Program
         {
             Console.WriteLine("Warning: Running syntax check mode, analysis on a raw *.cs files would have limited information.");
             settings.ILMetaCheck = false; // Disable IL meta checking in syntax check mode
+            
+            
+            
+
+
             //CodeGen.Instance.GenerateSyntax(settings);
+
             return;
         }
         else
         {
             //CodeGen.Instance.GenerateIL(settings);
+            CodeGen.Instance.Generate();
             return;
         }
     }
